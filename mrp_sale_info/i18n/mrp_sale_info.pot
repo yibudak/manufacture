@@ -19,7 +19,7 @@ msgstr ""
 #: field:mrp.production,commitment_date:0
 #: field:mrp.production.workcenter.line,commitment_date:0
 msgid "Commitment Date"
-msgstr "Taahhüt tarihi"
+msgstr ""
 
 #. module: mrp_sale_info
 #: view:mrp.production:mrp_sale_info.mrp_production_sale_info_search_view
@@ -27,49 +27,49 @@ msgstr "Taahhüt tarihi"
 #: view:mrp.production.workcenter.line:mrp_sale_info.view_mrp_production_workcenter_form_view_filter
 #: field:mrp.production.workcenter.line,partner_id:0
 msgid "Customer"
-msgstr "Müşteri"
+msgstr ""
 
 #. module: mrp_sale_info
 #: help:mrp.production,commitment_date:0
 #: help:mrp.production.workcenter.line,commitment_date:0
 msgid "Date by which the products are sure to be delivered. This is a date that you can promise to the customer, based on the Product Lead Times."
-msgstr "Ürünlerin kesin olarak gönderileceği tarih. Müşteriye söz verilen tarih."
+msgstr ""
 
 #. module: mrp_sale_info
 #: model:ir.model,name:mrp_sale_info.model_mrp_production
 msgid "Manufacturing Order"
-msgstr "Üretim Emri"
+msgstr ""
 
 #. module: mrp_sale_info
 #: view:mrp.production.workcenter.line:mrp_sale_info.mrp_production_workcenter_form_view_inherit
 msgid "Product to Produce"
-msgstr "Üretilecek Ürün"
+msgstr ""
 
 #. module: mrp_sale_info
 #: view:mrp.production.workcenter.line:mrp_sale_info.mrp_production_workcenter_form_view_inherit
 msgid "Sale Information"
-msgstr "Satış Siparişi Bilgisi"
+msgstr ""
 
 #. module: mrp_sale_info
 #: field:mrp.production,sale_line_id:0
 #: field:mrp.production.workcenter.line,sale_line_id:0
 msgid "Sale Line"
-msgstr "Sipariş Kalemi"
+msgstr ""
 
 #. module: mrp_sale_info
 #: view:mrp.production:mrp_sale_info.mrp_production_sale_info_search_view
 #: view:mrp.production.workcenter.line:mrp_sale_info.view_mrp_production_workcenter_form_view_filter
 msgid "Sale Order"
-msgstr "Satış Siparişi"
+msgstr ""
 
 #. module: mrp_sale_info
 #: field:mrp.production,sale_id:0
 #: field:mrp.production.workcenter.line,sale_id:0
 msgid "Sale order"
-msgstr "Satış Siparişi"
+msgstr ""
 
 #. module: mrp_sale_info
 #: model:ir.model,name:mrp_sale_info.model_mrp_production_workcenter_line
 msgid "Work Order"
-msgstr "İş Emri"
+msgstr ""
 
