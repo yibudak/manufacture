@@ -19,3 +19,7 @@ class MrpProduction(models.Model):
                                  string='Customer', store=True)
     commitment_date = fields.Datetime(related='sale_id.commitment_date',
                                       string='Commitment Date', store=True)
+    sale_note = fields.Text(
+        string='Sale order Note',
+        readonly=True, store=True,
+        related='move_prod_id.procurement_id.sale_line_id.order_id.note')
