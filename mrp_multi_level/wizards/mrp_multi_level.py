@@ -190,6 +190,8 @@ class MultiLevelMrp(models.TransientModel):
                         product_mrp_area_id.mrp_area_id):
                     # Stop explosion.
                     continue
+                if bomline._skip_bom_line(product_mrp_area_id.product_id):
+                    continue
                 # TODO: review: mrp_transit_delay, mrp_inspection_delay
                 mrp_date_demand_2 = mrp_date_demand - timedelta(
                     days=(product_mrp_area_id.mrp_transit_delay +
@@ -241,7 +243,7 @@ class MultiLevelMrp(models.TransientModel):
             planned_order = self.env['mrp.planned.order'].create(order_data)
             qty_ordered = qty_ordered + qty
 
-            if product_mrp_area_id.supply_method == 'manufacture':
+            if product_mrp_area_id._to_be_exploded():
                 self.explode_action(
                     product_mrp_area_id, mrp_action_date,
                     name, qty, planned_order)

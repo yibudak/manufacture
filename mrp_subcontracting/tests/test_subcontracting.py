@@ -210,8 +210,11 @@ class TestSubcontractingFlows(TestMrpSubcontractingCommon):
         # Tick "manufacture" and MTO on self.comp2
         mto_route = self.env.ref('stock.route_warehouse0_mto')
         manufacture_route = self.env.ref('mrp.route_warehouse0_manufacture')
-        self.comp2.write({'route_ids': [(4, manufacture_route.id, None)]})
-        self.comp2.write({'route_ids': [(4, mto_route.id, None)]})
+        self.comp2.write({'route_ids': [
+            (5, False),
+            (4, manufacture_route.id, None),
+            (4, mto_route.id, None),
+        ]})
         # Create a receipt picking from the subcontractor
         picking_form = Form(self.env['stock.picking'])
         picking_form.picking_type_id = self.env.ref('stock.picking_type_in')
@@ -272,8 +275,11 @@ class TestSubcontractingFlows(TestMrpSubcontractingCommon):
         # Tick "manufacture" and MTO on self.comp2
         mto_route = self.env.ref('stock.route_warehouse0_mto')
         manufacture_route = self.env.ref('mrp.route_warehouse0_manufacture')
-        self.comp2.write({'route_ids': [(4, manufacture_route.id, None)]})
-        self.comp2.write({'route_ids': [(4, mto_route.id, None)]})
+        self.comp2.write({'route_ids': [
+            (5, False),
+            (4, manufacture_route.id, None),
+            (4, mto_route.id, None),
+        ]})
         orderpoint_form = Form(self.env['stock.warehouse.orderpoint'])
         orderpoint_form.product_id = self.comp2
         orderpoint_form.product_min_qty = 0.0
@@ -632,15 +638,21 @@ class TestSubcontractingTracking(TransactionCase):
 
         # 2. Create a BOM of subcontracting type
         # 2.1. Comp1 has tracking by lot
+        seller = self.env['product.supplierinfo'].create({
+            'name': self.subcontractor_partner1.id,
+            'price': 10.0,
+        })
         self.comp1_sn = self.env['product.product'].create({
             'name': 'Component1',
             'type': 'product',
+            'seller_ids': [(6, 0, [seller.id])],
             'categ_id': self.env.ref('product.product_category_all').id,
             'tracking': 'serial'
         })
         self.comp2 = self.env['product.product'].create({
             'name': 'Component2',
             'type': 'product',
+            'seller_ids': [(6, 0, [seller.id])],
             'categ_id': self.env.ref('product.product_category_all').id,
         })
 

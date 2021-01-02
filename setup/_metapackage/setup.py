@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo12-addon-account_move_line_manufacture_info',
         'odoo12-addon-mrp_auto_assign',
+        'odoo12-addon-mrp_auto_create_lot',
         'odoo12-addon-mrp_bom_component_menu',
         'odoo12-addon-mrp_bom_line_sequence',
         'odoo12-addon-mrp_bom_location',
@@ -23,6 +24,10 @@ setuptools.setup(
         'odoo12-addon-mrp_production_note',
         'odoo12-addon-mrp_production_putaway_strategy',
         'odoo12-addon-mrp_production_request',
+        'odoo12-addon-mrp_production_show_post_inventory',
+        'odoo12-addon-mrp_progress_button',
+        'odoo12-addon-mrp_request_bom_structure',
+        'odoo12-addon-mrp_request_workcenter_cycle',
         'odoo12-addon-mrp_sale_info',
         'odoo12-addon-mrp_stock_orderpoint_manual_procurement',
         'odoo12-addon-mrp_subcontracting',

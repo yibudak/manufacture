@@ -49,9 +49,9 @@ class StockPicking(models.Model):
         productions = self.env['mrp.production']
         for picking in self:
             for move in picking.move_lines:
-                if not move.is_subcontract:
-                    continue
                 production = move.move_orig_ids.mapped('production_id')
+                if not move.is_subcontract or production.state in ('done', 'cancel'):
+                    continue
                 if move._has_tracked_subcontract_components():
                     move.move_orig_ids.filtered(
                         lambda m: m.state not in ('done', 'cancel')
@@ -73,7 +73,8 @@ class StockPicking(models.Model):
                 else:
                     for move_line in move.move_line_ids:
                         produce = self.env['mrp.product.produce'].with_context(
-                            default_production_id=production.id).create({
+                            default_production_id=production.id,
+                            active_id=production.id).create({
                                 'production_id': production.id,
                                 'product_id': production.product_id.id,
                                 'product_qty': move_line.qty_done,
