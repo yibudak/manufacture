@@ -13,12 +13,14 @@ setuptools.setup(
         'odoo12-addon-base_repair_config',
         'odoo12-addon-mrp_auto_assign',
         'odoo12-addon-mrp_auto_create_lot',
+        'odoo12-addon-mrp_bom_comparison',
         'odoo12-addon-mrp_bom_component_menu',
         'odoo12-addon-mrp_bom_line_sequence',
         'odoo12-addon-mrp_bom_location',
         'odoo12-addon-mrp_bom_multi_company',
         'odoo12-addon-mrp_bom_note',
         'odoo12-addon-mrp_bom_tracking',
+        'odoo12-addon-mrp_mto_with_stock',
         'odoo12-addon-mrp_multi_level',
         'odoo12-addon-mrp_multi_level_estimate',
         'odoo12-addon-mrp_planned_order_matrix',
@@ -53,11 +55,13 @@ setuptools.setup(
         'odoo12-addon-repair_payment_term',
         'odoo12-addon-repair_refurbish',
         'odoo12-addon-repair_timeline',
+        'odoo12-addon-stock_mts_mto_rule_mrp',
         'odoo12-addon-stock_picking_product_kit_helper',
         'odoo12-addon-stock_whole_kit_constraint',
     ],
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Odoo',
+        'Framework :: Odoo :: 12.0',
     ]
 )

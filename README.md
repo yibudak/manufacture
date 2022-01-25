@@ -18,12 +18,14 @@ addon | version | maintainers | summary
 [base_repair_config](base_repair_config/) | 12.0.1.0.1 | [![marcelsavegnago](https://github.com/marcelsavegnago.png?size=30px)](https://github.com/marcelsavegnago) | Provides general settings for the Repair App
 [mrp_auto_assign](mrp_auto_assign/) | 12.0.1.0.0 |  | Make MO automatically reserve raw material moves at creation
 [mrp_auto_create_lot](mrp_auto_create_lot/) | 12.0.1.0.1 | [![ps-tubtim](https://github.com/ps-tubtim.png?size=30px)](https://github.com/ps-tubtim) | Auto create lots for work orders
+[mrp_bom_comparison](mrp_bom_comparison/) | 12.0.1.0.0 |  | Compare two Bill of Materials to view the differences
 [mrp_bom_component_menu](mrp_bom_component_menu/) | 12.0.1.0.0 |  | MRP BOM Component Menu
 [mrp_bom_line_sequence](mrp_bom_line_sequence/) | 12.0.1.0.0 |  | Manages the order of BOM lines by displaying its sequence
 [mrp_bom_location](mrp_bom_location/) | 12.0.1.0.2 |  | Adds location field to Bill of Materials and its components.
 [mrp_bom_multi_company](mrp_bom_multi_company/) | 12.0.1.0.0 |  | Multi Company Bill of Materials
 [mrp_bom_note](mrp_bom_note/) | 12.0.1.0.0 |  | Notes in Bill of Materials
 [mrp_bom_tracking](mrp_bom_tracking/) | 12.0.1.0.1 |  | Logs any change to a BoM in the chatter
+[mrp_mto_with_stock](mrp_mto_with_stock/) | 12.0.1.0.0 |  | Fix Manufacturing orders to pull from stock until qty is zero, and then create a procurement for them.
 [mrp_multi_level](mrp_multi_level/) | 12.0.2.3.0 | [![JordiBForgeFlow](https://github.com/JordiBForgeFlow.png?size=30px)](https://github.com/JordiBForgeFlow) [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Adds an MRP Scheduler
 [mrp_multi_level_estimate](mrp_multi_level_estimate/) | 12.0.1.1.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Allows to consider demand estimates using MRP multi level.
 [mrp_planned_order_matrix](mrp_planned_order_matrix/) | 12.0.1.0.1 |  | Allows to create fixed planned orders on a grid view.
@@ -58,6 +60,7 @@ addon | version | maintainers | summary
 [repair_payment_term](repair_payment_term/) | 12.0.1.0.0 | [![mileo](https://github.com/mileo.png?size=30px)](https://github.com/mileo) | This module add to Repair Orders the *Payment Term* field
 [repair_refurbish](repair_refurbish/) | 12.0.1.1.3 |  | Create refurbished products during repair
 [repair_timeline](repair_timeline/) | 12.0.1.0.1 | [![marcelsavegnago](https://github.com/marcelsavegnago.png?size=30px)](https://github.com/marcelsavegnago) | Add timeline view
+[stock_mts_mto_rule_mrp](stock_mts_mto_rule_mrp/) | 12.0.1.0.0 |  | Add support for MTS+MTO route on manufacturing
 [stock_picking_product_kit_helper](stock_picking_product_kit_helper/) | 12.0.1.0.0 | [![kittiu](https://github.com/kittiu.png?size=30px)](https://github.com/kittiu) | Set quanity in picking line based on product kit quantity
 [stock_whole_kit_constraint](stock_whole_kit_constraint/) | 12.0.1.0.0 |  | Avoid to deliver a kit partially
 
