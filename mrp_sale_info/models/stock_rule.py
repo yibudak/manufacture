@@ -14,6 +14,6 @@ class StockRule(models.Model):
             product_id, product_qty, product_uom, location_id, name,
             origin, values, bom
         )
-        res["source_procurement_group_id"] = values.get(
-            "group_id").id if values.get('group_id', False) else False
+        res.update(dict.fromkeys(['procurement_group_id', 'source_procurement_group_id'], values.get(
+            "group_id").id if values.get('group_id', False) else False))
         return res
