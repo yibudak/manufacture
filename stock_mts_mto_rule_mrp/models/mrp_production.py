@@ -41,10 +41,12 @@ class MrpProduction(models.Model):
                 if float_is_zero(needed_qty, precision_digits=precision):
                     # no additional product -> MTS
                     move.procure_method = split_rule.mts_rule_id.procure_method
+                    move.rule_id = split_rule.mts_rule_id
                 elif float_compare(needed_qty, product_qty,
                                    precision_digits=precision) == 0.0:
                     # no stock -> MTO
                     move.procure_method = split_rule.mto_rule_id.procure_method
+                    move.rule_id = split_rule.mto_rule_id
                 else:
                     # partial MTS, remainder MTO
                     mts_qty = product_qty - needed_qty
@@ -53,13 +55,15 @@ class MrpProduction(models.Model):
                     move.update(
                         {
                             "procure_method": mts_rule.procure_method,
-                            "product_uom_qty": mts_qty
+                            "product_uom_qty": mts_qty,
+                            "rule_id": mts_rule.id
                         }
                     )
                     # create the MTO move, attached to same MO
                     move.copy(
                         default={
                             "procure_method": mto_rule.procure_method,
-                            "product_uom_qty": needed_qty
+                            "product_uom_qty": needed_qty,
+                            "rule_id": mto_rule.id
                         }
                     )
